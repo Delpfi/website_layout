@@ -1,0 +1,459 @@
+/* (*)- применяем для всех, box-sizing: border-box - это модель элементов, для подсчета отступов */
+/*box-sizing: border-box -указывается перед всеми элементами*/
+*, *:before{
+    box-sizing: border-box;
+}
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1; /*высота строчки*/
+    font-size: 14px;
+}
+
+
+
+h1, h2, h3 {
+    font-size: inherit;/*наследует значение родителя*/
+    font-weight: inherit;
+}
+
+.background {
+    /*размеры width, height*/
+    width: 1280px;
+    height: 3186px;
+    margin: 0 auto; /*страница по центру*/
+    background-color: #ffffff; /*Общий фон, первый слой*/
+        
+}
+.container { /* размеры 1-ого контенера, держит размер*/
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.head-bg{
+    width: 1280px;
+    height: 323px;
+    position: relative;
+    background: #445161;
+}
+
+.head_row {
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);/*цвет тени, из макета*/
+ }
+
+.head_body {
+    padding: 50px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between; /*растинуть равномерно по всей ширине блока*/
+}
+
+.head_column, .head_shape9{
+    max-width: 50%;
+}
+  
+.head_product_name {
+    font-size: 60px;
+}
+
+.head_list_info {
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.head_list_info li::before {
+    content: "";
+    background: url("../img/header/check.png") no-repeat;
+    padding-left: 35px;
+    width: 25px;
+    height: 19px;
+}
+
+.head_shape9{
+    width: 469px;
+    height: 214px;
+    background-color: #ffffff;
+
+}
+
+.about_row {
+    height: 295px;
+    margin-top: 50px;
+    color: #445161;
+}
+
+.about_body {
+    display: flex; /*выстроить в одно строку*/
+    height: 245px;
+}
+
+.about_your_product {
+    
+    float: left;
+    margin: 0 85px 0 0;
+    position: relative;
+    width: 660px;
+    
+}
+.about_head_title{
+    text-align: left;
+    color: #445161;
+    font-size: 30px;
+
+    /*
+    text-align: left;- другой варинат -,
+        width: 254px;
+        height: 28px;
+    */ 
+} 
+
+.about_text {
+    color: #333333;
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 24px;
+}
+
+.about_video {
+    float: right;
+    height: 245px;
+    /*margin: 0px 0 0;*/
+    width: 430px;
+    background: #445161;
+}
+
+.dignity_pluses{
+    height: 420px;
+    background-color: #F5F5F5;
+}
+.dignity_title {
+    color: #445161;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    padding: 47px 0px 30px 0px;
+}
+.dignity_row {
+    display: flex;
+    justify-content: space-between;
+}
+.dignity_colums {
+    width: 50%;
+}
+
+.dignity_item_layer {
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.dignity_item_layer:last-child {
+    margin: 0;
+}
+
+.dignity_item_layer p {
+    padding-left: 42px;
+}
+
+.dignity_item_layer::before {
+    box-sizing: border-box;
+    position: absolute;
+    top: 6px;
+    content: "";
+    width: 32px;
+    height: 32px;
+    padding-left: 32px;
+    background: url("../img/pluses_dignity/layer.png") 6px 6px/auto auto no-repeat #445161;
+}
+
+.scrinshots {
+    height: 490px;
+}
+
+.scrinshots_title{
+    color: #445161;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    padding: 51px 0px 35px 0px;
+}
+
+.scrinshots_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.scrinshots_column {
+    width: 50%;
+    /*height: 154px;*/
+}
+
+.item_column {
+    display: flex;
+    /*margin-bottom: 30px;*/
+    
+}
+
+.item_square_image {
+    min-width: 200px;
+    height: 150px;
+    background-color: #445161;
+}
+
+.item_description {
+    padding: 0 15px;
+}
+
+.item_title {
+    
+    font-size: 24px;
+    color: #445161;
+}
+
+.item_text {
+    width: 360px;
+    height: 130px;
+    margin: 15px 0 5px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    /*padding-top: 10px;*/
+}
+
+.reviews {
+    height: 425px;
+    background-color: #F5F5F5;
+}
+
+.reviews_title {
+    padding: 50px 0px 23px 0px;
+    color: #445161;
+    text-align: center;
+    font-size: 30px;
+}
+
+.reviews_row { /*разбить по блокам*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /*растояния по горизонтали */
+}
+
+.reviews_column { 
+    max-width: 50%;
+    padding: 12px 0;
+}
+
+.column_item {
+    display: flex;
+    /*margin-bottom: 30px;- растояния больше между всеми блоками, расстояние снаруже */
+}
+
+.column_square_userpic {
+    min-width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #445161;
+}
+
+
+.comment {
+    position: relative;
+    padding-left: 14px;
+}
+
+.comment::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 16px solid #EBEBEB;
+}
+
+.comment_description {
+    width: 478px;
+    height: 121px;
+    background-color: #EBEBEB;
+    line-height: 18px;
+    margin-left: 14px;
+    border-radius: 4px;
+}
+.comment_text {
+    font-style: italic;
+    color: #333333;
+    padding: 15px 15px 15px 12px;/*растояние внутри блока*/
+}
+.comment_author {
+    padding-left: 12px;
+    color: #989898;
+}
+
+
+.buy{
+    height: 670px;
+}
+
+.buy_title{
+    padding: 50px 0px 28px 0px;
+    color: #445161;
+    text-align: center;
+    font-size: 30px;
+}
+
+.buy_row{
+    height: 522px;/* для авто , убрать*/
+    display: flex;
+    align-items: flex-end;
+    margin: 0 70px;
+}
+
+.buy_column{
+    width: 33%;
+    background-color: #445161;
+    color: #ffffff;
+    border-radius: 4px;
+    border: 3px solid #445161;
+    margin: 0 21px;
+}
+
+.column_title {
+    padding: 16px 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+.column_price {
+    text-align: center;
+    height: 72px;
+    background-color: #ffffff;
+    font-size: 40px;
+    color: #445161;
+    line-height: 72px;
+}
+
+.column_desription {
+    padding: 20px 20px 0 20px;
+    /*margin: 19px 38px 0px 20px;*/
+    box-sizing: border-box;
+    
+}
+
+.column_desription li {
+    margin-top: 10px;
+    
+}
+
+.column_desription:last-child {
+    margin: 0;
+}
+
+.column_button {
+    text-align: center;
+    width: 260px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #445161;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+    border-radius: 3px;
+    margin: 20px;
+}
+
+.footer_contacts {
+    height: 510px;
+    background-color: #445161;
+    padding: 50px 0 45px;
+}
+
+.contacts_title {
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+.contacts_row {
+    display: flex;
+}
+
+.contacts_column_data form {
+    display: flex;
+    flex-direction: column; /*чтобы не в строчку из за flex, а в колонку*/
+    align-items: center;
+    padding-left: 200px;
+}
+
+.contacts_column_data input {
+    margin-bottom: 22px;
+    padding: 0 10px;
+    width: 500px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #445161;
+}
+
+.contacts_column_data textarea {
+    width: 500px;
+    height: 170px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 22px;
+    padding: 10px;
+    color: #445161;
+}
+
+.contacts_column_data button {
+    display: block;
+    width: 140px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #445161;
+}
+
+.contacts_column_connection {
+    padding-left: 47px;
+}
+.contacts_column_connection p{
+    color: #ffffff;
+}
+
+.connection_call .contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.contacts_column_connection p {
+    padding-left: 5px;
+   
+}
+
+.connection_social_button img {
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+.next_footer {
+    width: 284px;
+    height: 20px;
+    object-fit: contain;
+    font-size: 12px;
+    left: 498px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #445161;
+    position: relative;
+    margin: 7px;
+}
